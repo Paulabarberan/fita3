@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #FDE87D;
+            text-align: center;
+            font-family: 'Inder', sans-serif;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #title {
+            font-size: 24px;
+            margin: 20px 0 10px 0;
+        }
+        #rectangle {
+            width: 741px;
+            height: 406px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            margin: 20px 30px;
+            position: relative;
+        }
+        #login-text {
+            margin-bottom: 20px;
+        }
+        #user-form, #password-form {
+            margin-bottom: 20px;
+        }
+        #accede-button {
+            background-color: #FDE87D;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #forgot-password-link {
+            text-align: right;
+            text-decoration: underline;
+        }
+        #register-text {
+            margin: 20px 0 0 0;
+        }
+        #register-link {
+            text-decoration: underline;
+        }
+        #logo {
+            position: absolute;
+            bottom: -10px;
+            right: -10px;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media (max-width: 767px) {
+            #rectangle {
+                width: 100%;
+                margin: 20px;
+            }
+        }
+
+        /* Media query para tabletas */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #rectangle {
+                width: 500px;
+                margin: 20px;
+            }
+        }
+
+        /* Media query para ordenadores */
+        @media (min-width: 1024px) {
+            #rectangle {
+                width: 741px;
+                margin: 20px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">MI PERFIL</h1>
+        <div id="rectangle">
+            <p id="login-text">¿Ya tienes cuenta? Accede:</p>
+            <form id="user-form">
+                Usuario: <input type="text">
+            </form>
+            <form id="password-form">
+                Contraseña: <input type="password">
+            </form>
+            <button id="accede-button">ACCEDE</button>
+            <a id="forgot-password-link" href="#">¿Has olvidado tu contraseña?</a>
+        </div>
+        <p id="register-text">¿No tienes cuenta? <a id="register-link" href="singin.html">Regístrate aquí</a></p>
+        <img id="logo" src="logo2.jpg" alt="Logo">
+    </div>
+
+    <script>
+        document.getElementById("accede-button").addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // Obtener los valores de usuario y contraseña
+            var usuario = document.querySelector("#user-form input").value;
+            var contrasenya = document.querySelector("#password-form input").value;
+
+            // Obtener el diccionario de registros desde el almacenamiento local
+            var registro = JSON.parse(localStorage.getItem('registro')) || {};
+
+            // Verificar si el usuario y la contraseña coinciden con alguna entrada en el diccionario
+            if (registro[usuario] && registro[usuario] === contrasenya) {
+                // Si coinciden, mostrar mensaje de acceso
+                alert("¡Has accedido a tu cuenta!");
+            } else {
+                // Si no coinciden, mostrar mensaje de error
+                alert("Usuario o contraseña incorrecto");
+            }
+        });
+    </script>
+</body>
+</html>
+   

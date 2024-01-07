@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #FDE87D;
+            text-align: center;
+            font-family: 'Inder', sans-serif;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #rectangle {
+            width: 80%; /* Cambié el ancho para dispositivos móviles */
+            max-width: 759px;
+            background-color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            margin: 20px auto; /* Centrar en dispositivos móviles y tabletas */
+        }
+        #title {
+            font-size: 44px;
+        }
+        #join-text {
+            margin: 10px 0;
+        }
+        #create-account-form {
+            margin: 10px 0;
+        }
+        .form-label {
+            margin: 10px 0;
+        }
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        a.button {
+            background-color: #FDE87D;
+            color: black;
+            text-decoration: none;
+            display: inline-block;
+            width: 308px;
+            height: 43px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            line-height: 43px;
+            border: 2px solid black;
+        }
+        #have-account-text {
+            margin: 20px 0;
+        }
+        #login-link {
+            text-decoration: underline;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media (max-width: 767px) {
+            #rectangle {
+                width: 100%;
+            }
+        }
+
+        /* Media query para tabletas */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            /* No se necesita cambiar nada para tabletas */
+        }
+
+        /* Media query para ordenadores */
+        @media (min-width: 1024px) {
+            /* No se necesita cambiar nada para ordenadores */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="rectangle">
+            <h1 id="title">REGISTRO</h1>
+            <p id="join-text">¡Únete a Ordeni!</p>
+            <form id="create-account-form">
+                <label class="form-label" for="nombre">Nombre:</label>
+                <input class="form-input" type="text" id="nombre" name="nombre" required>
+
+                <label class="form-label" for="apellidos">Apellidos:</label>
+                <input class="form-input" type="text" id="apellidos" name="apellidos" required>
+
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" id="email" name="email" required>
+
+                <label class="form-label" for="contrasenya">Contraseña:</label>
+                <input class="form-input" type="password" id="contrasenya" name="contrasenya" required>
+
+                <div id="crear-cuenta">
+                    <!-- Utilizamos la etiqueta <a> para crear un enlace al otro archivo HTML -->
+                    <a href="logout.html" class="button">Crear cuenta</a>
+            </form>
+        </div>
+        <p id="have-account-text">¿Ya tienes cuenta? <a id="login-link" href="login.html">Accede aquí</a></p>
+        <!-- Cambié el href del enlace "Accede aquí" a "otra_pagina.html" -->
+    </div>
+</body>
+</html>
+
+    

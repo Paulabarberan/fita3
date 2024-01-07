@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #FDE87D;
+            text-align: center;
+            font-family: 'Inder', sans-serif;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #logo {
+            width: 400px;
+            height: 200px;
+            margin-top: 20px;
+        }
+        .button {
+            width: 312px;
+            height: 71px;
+            background-color: #FFFFFF;
+            border: 2px solid #000000; 
+            font-size: 19px;
+            font-family: 'Inder', sans-serif;
+            margin: 10px 0;
+        }
+        #crear-cuenta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #acceder-cuenta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #terminos-link {
+            font-size: 16px;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        /* Media query para dispositivos móviles */
+        @media (max-width: 767px) {
+            #logo {
+                width: 250px;
+                height: 150px;
+            }
+            .button {
+                width: 250px;
+                height: 61px;
+            }
+        }
+
+        /* Media query para tablet */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            #logo {
+                width: 300px;
+                height: 175px;
+            }
+            .button {
+                width: 280px;
+                height: 66px;
+            }
+        }
+
+        /* Media query para ordenadores */
+        @media (min-width: 1024px) {
+            #logo {
+                width: 350px;
+                height: 200px;
+            }
+            .button {
+                width: 312px;
+                height: 71px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="logo" src="ordeni.png" alt="Logo">
+        <br> 
+        <div id="crear-cuenta">
+            
+            <form action="singin.html" method="post">
+                <button class="button" type="submit">CREAR CUENTA</button>
+            </form>
+        </div>
+        <div id="acceder-cuenta">
+            
+            <form action="login.html" method="post">
+                <button class="button" type="submit">ACCEDER A MI CUENTA</button>
+            </form>
+        </div>
+        <a id="terminos-link" href="#"><u>Terminos y condiciones</u></a>
+    </div>
+</body>
+</html>
+           

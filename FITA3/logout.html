@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJUSTES</title>
+    <style>
+        body {
+            background-color: #FDE87D;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: rgb(0, 0, 0);
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 0px;
+            margin-top: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        button, a.button {
+            background-color: #FDE87D;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            margin: 5px;
+            border: black;
+            border-radius: 0px;
+            cursor: pointer;
+            flex: 1;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            button, a.button {
+                margin: 3px;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+        @media only screen and (min-width: 769px) {
+            .container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>AJUSTES</h2>
+    <div class="container">
+        <button>PERFIL</button>
+        <button>NOTIFICACIONES</button>
+        <button>AYUDA</button>
+        <button>PRIVACIDAD</button>
+        <button>TÉRMINOS Y CONDICIONES</button>
+        <!-- Enlace que dirige aL LOGOUT -->
+        <a href="logout2.html" class="button">CERRAR SESIÓN</a>
+    </div>
+
+</body>
+</html>
+
